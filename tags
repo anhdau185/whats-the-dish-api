@@ -1,0 +1,45 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+Api	app/controllers/api/v1/categories_controller.rb	/^module Api$/;"	m
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:WhatsTheDishApi
+ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
+ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
+ApplicationCable	test/channels/application_cable/connection_test.rb	/^class ApplicationCable::ConnectionTest < ActionCable::Connection::TestCase$/;"	c
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::API$/;"	c
+ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::Base$/;"	c
+ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
+ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c
+CategoriesController	app/controllers/api/v1/categories_controller.rb	/^    class CategoriesController < ApplicationController$/;"	c	class:Api.V1
+Category	app/models/category.rb	/^class Category < ApplicationRecord$/;"	c
+CategorySerializer	app/serializers/category_serializer.rb	/^class CategorySerializer < ActiveModel::Serializer$/;"	c
+CategoryTest	test/models/category_test.rb	/^class CategoryTest < ActiveSupport::TestCase$/;"	c
+Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	class:ApplicationCable
+Connection	app/channels/application_cable/connection.rb	/^  class Connection < ActionCable::Connection::Base$/;"	c	class:ApplicationCable
+CreateCategories	db/migrate/20211005061319_create_categories.rb	/^class CreateCategories < ActiveRecord::Migration[6.1]$/;"	c
+CreateDishes	db/migrate/20211005062921_create_dishes.rb	/^class CreateDishes < ActiveRecord::Migration[6.1]$/;"	c
+Dish	app/models/dish.rb	/^class Dish < ApplicationRecord$/;"	c
+DishSerializer	app/serializers/dish_serializer.rb	/^class DishSerializer < ActiveModel::Serializer$/;"	c
+DishTest	test/models/dish_test.rb	/^class DishTest < ActiveSupport::TestCase$/;"	c
+V1	app/controllers/api/v1/categories_controller.rb	/^  module V1$/;"	m	class:Api
+WhatsTheDishApi	config/application.rb	/^module WhatsTheDishApi$/;"	m
+activate_bundler	bin/bundle	/^  def activate_bundler$/;"	f
+activation_error_handling	bin/bundle	/^  def activation_error_handling$/;"	f
+bundler_requirement	bin/bundle	/^  def bundler_requirement$/;"	f
+bundler_version	bin/bundle	/^  def bundler_version$/;"	f
+change	db/migrate/20211005061319_create_categories.rb	/^  def change$/;"	f	class:CreateCategories
+change	db/migrate/20211005062921_create_dishes.rb	/^  def change$/;"	f	class:CreateDishes
+cli_arg_version	bin/bundle	/^  def cli_arg_version$/;"	f
+env_var_version	bin/bundle	/^  def env_var_version$/;"	f
+gemfile	bin/bundle	/^  def gemfile$/;"	f
+invoked_as_script?	bin/bundle	/^  def invoked_as_script?$/;"	f
+load_bundler!	bin/bundle	/^  def load_bundler!$/;"	f
+lockfile	bin/bundle	/^  def lockfile$/;"	f
+lockfile_version	bin/bundle	/^  def lockfile_version$/;"	f
+prepare_category	app/controllers/api/v1/categories_controller.rb	/^      def prepare_category$/;"	f	class:Api.V1.CategoriesController
+show	app/controllers/api/v1/categories_controller.rb	/^      def show$/;"	f	class:Api.V1.CategoriesController
+system!	bin/setup	/^def system!(*args)$/;"	f
