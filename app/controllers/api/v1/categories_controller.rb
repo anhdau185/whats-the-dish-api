@@ -4,20 +4,17 @@ module Api
   module V1
     class CategoriesController < ApplicationController
       def index
-        categories = Category.all
-        render json: categories, include: ['dishes']
+        render json: Category.all,
+               include: ['dishes']
       end
 
       def show
-        category = Category.find(params[:id])
-        render json: category, include: ['dishes']
+        render json: Category.find(params[:id]),
+               include: ['dishes']
       end
 
       def create
-        category_details = params
-          .require(:attributes)
-          .permit(:name, :title, :description, images: [])
-        category = Category.new(category_details)
+        category = Category.new(category_attributes)
 
         if category.save
           render status: 201, json: category
@@ -28,11 +25,8 @@ module Api
 
       def update
         category = Category.find(params[:id])
-        category_details = params
-          .require(:attributes)
-          .permit(:name, :title, :description, images: [])
 
-        if category.update(category_details)
+        if category.update(category_attributes)
           render json: category, include: ['dishes']
         else
           render status: 400
@@ -40,13 +34,24 @@ module Api
       end
 
       def destroy
-        category = Category.find(params[:id])
+        category = Category.find(params[:id]);
 
         if category.destroy
           render status: 204
         else
           render status: 400
         end
+      end
+
+      private
+
+      def category_attributes
+        params.require(:attributes).permit(
+          :name,
+          :title,
+          :description,
+          images: []
+        )
       end
     end
   end
