@@ -4,13 +4,23 @@ module Api
   module V1
     class CategoriesController < ApplicationController
       def index
-        render json: Category.all.order(:name),
-               include: ['dishes']
+        categories = Category.all.order(:name)
+
+        if include_dishes?
+          render json: categories, include: ['dishes']
+        else
+          render json: categories
+        end
       end
 
       def show
-        render json: Category.find(params[:id]),
-               include: ['dishes']
+        category = Category.find(params[:id])
+
+        if include_dishes?
+          render json: category, include: ['dishes']
+        else
+          render json: category
+        end
       end
 
       def create
@@ -52,6 +62,12 @@ module Api
           :description,
           images: []
         )
+      end
+
+      def include_dishes?
+        return false if params[:include_dishes].blank?
+
+        params[:include_dishes] == 'true'
       end
     end
   end
