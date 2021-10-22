@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_22_022133) do
+ActiveRecord::Schema.define(version: 2021_10_22_025639) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,13 +40,10 @@ ActiveRecord::Schema.define(version: 2021_10_22_022133) do
     t.text "images", default: [], array: true
     t.text "places", default: [], array: true
     t.integer "likeCount", default: 0
-    t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["category_id"], name: "index_dishes_on_category_id"
   end
 
   add_foreign_key "category_assignments", "categories"
   add_foreign_key "category_assignments", "dishes"
-  add_foreign_key "dishes", "categories"
 end
