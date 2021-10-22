@@ -6,5 +6,5 @@ class CategorySerializer < ActiveModel::Serializer
              :images,
              :created_at,
              :updated_at
-  has_many :dishes
+  has_many :dishes, through: :category_assignments
 end

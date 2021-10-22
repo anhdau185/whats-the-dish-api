@@ -5,8 +5,8 @@ class DishSerializer < ActiveModel::Serializer
              :description,
              :images,
              :places,
-             :likeCount,
+             :like_count,
              :created_at,
              :updated_at
-  belongs_to :category
+  has_many :categories, through: :category_assignments
 end
