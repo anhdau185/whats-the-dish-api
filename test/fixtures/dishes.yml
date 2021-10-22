@@ -6,7 +6,7 @@ one:
   description: MyString
   images: MyText
   places: MyText
-  likeCount: 1
+  like_count: 1
 
 two:
   name: MyString
@@ -14,4 +14,4 @@ two:
   description: MyString
   images: MyText
   places: MyText
-  likeCount: 1
+  like_count: 1
