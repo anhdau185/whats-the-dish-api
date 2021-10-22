@@ -4,7 +4,7 @@ module Api
   module V1
     class CategoriesController < ApplicationController
       def index
-        categories = Category.all.order(:name)
+        categories = query_categories
 
         if include_dishes?
           render json: categories, include: ['dishes']
@@ -55,6 +55,10 @@ module Api
 
       private
 
+      def query_categories
+        Category.all.order(order_by => order_direction)
+      end
+
       def category_attributes
         params.require(:attributes).permit(
           :name,
@@ -68,6 +72,18 @@ module Api
         return false if params[:include_dishes].blank?
 
         params[:include_dishes] == 'true'
+      end
+
+      def order_by
+        return :name if params[:order_by].blank?
+
+        params[:order_by].to_sym
+      end
+
+      def order_direction
+        return :asc if params[:order_direction].blank?
+
+        params[:order_direction].to_sym
       end
     end
   end
