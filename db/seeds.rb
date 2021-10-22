@@ -13,6 +13,8 @@ Category.create(name: 'snacks', title: 'Snacks')
 Category.create(name: 'drinks', title: 'Drinks')
 Category.create(name: 'desserts', title: 'Desserts')
 
-breakfast.dishes.create(name: 'banh-mi-chao-op-la', title: 'Bánh mì chảo ốp la')
-breakfast.dishes.create(name: 'com-tam-suon', title: 'Cơm tấm sườn')
-breakfast.dishes.create(name: 'banh-mi-thit-nguoi', title: 'Bánh mì thịt nguội')
+dish1 = Dish.create(name: 'banh-mi-chao-op-la', title: 'Bánh mì chảo ốp la')
+dish2 = Dish.create(name: 'com-tam-suon', title: 'Cơm tấm sườn')
+dish3 = Dish.create(name: 'banh-mi-thit-nguoi', title: 'Bánh mì thịt nguội')
+
+breakfast.dishes << [dish1, dish2, dish3]

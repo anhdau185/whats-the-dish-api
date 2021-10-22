@@ -1,3 +1,6 @@
 class Category < ApplicationRecord
-  has_many :dishes
+  has_many :category_assignments, dependent: :destroy
+  has_many :dishes, through: :category_assignments
+
+  validates :name, presence: true
 end
