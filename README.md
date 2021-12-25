@@ -8,13 +8,13 @@ bundle install
 ```
 
 ### Setting up database
-Create a database name:
+Create a database:
 
 ```
 rails db:create
 ```
 
-and run rake:
+and run migration:
 
 ```
 rails db:migrate
