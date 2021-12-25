@@ -1,24 +1,26 @@
-# README
+# What's The Dish API
+A RESTful API for serving the What's The Dish client(s).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Getting Started
+### Installing dependencies
+```
+bundle install
+```
 
-Things you may want to cover:
+### Setting up database
+Create a database name:
 
-* Ruby version
+```
+rails db:create
+```
 
-* System dependencies
+and run rake:
 
-* Configuration
+```
+rails db:migrate
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### How to run it on local
+```
+rails s
+```
