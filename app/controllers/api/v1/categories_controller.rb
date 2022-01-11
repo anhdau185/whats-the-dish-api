@@ -64,7 +64,8 @@ module Api
           :name,
           :title,
           :description,
-          images: []
+          images: [],
+          dish_ids: []
         )
       end
 
