@@ -37,7 +37,7 @@ module Api
         category = Category.find(params[:id])
 
         if category.update(category_attributes)
-          render json: category, include: ['dishes']
+          render json: category
         else
           render status: 400
         end
