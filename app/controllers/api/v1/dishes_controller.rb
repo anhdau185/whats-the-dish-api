@@ -53,6 +53,30 @@ module Api
         end
       end
 
+      def like
+        dish = Dish.find(params[:id])
+        current_like_count = dish.like_count
+
+        if dish.update(like_count: current_like_count + 1)
+          render json: dish
+        else
+          render status: 400
+        end
+      end
+
+      def unlike
+        dish = Dish.find(params[:id])
+        current_like_count = dish.like_count
+
+        if cannot_unlike?(current_like_count)
+          render status: 422
+        elsif dish.update(like_count: current_like_count - 1)
+          render json: dish
+        else
+          render status: 400
+        end
+      end
+
       private
 
       def dish_attributes
@@ -85,6 +109,10 @@ module Api
         return :asc if params[:order_direction].blank?
 
         params[:order_direction].to_sym
+      end
+
+      def cannot_unlike?(like_count)
+        like_count.nil? || like_count <= 0
       end
     end
   end
