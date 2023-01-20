@@ -73,6 +73,10 @@ GEM
       activesupport
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.10.0)
     ffi (1.15.4)
     globalid (1.0.0)
@@ -156,12 +160,14 @@ GEM
 PLATFORMS
   x86_64-darwin-19
   x86_64-darwin-20
+  x86_64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.4)
   bootsnap (>= 1.4.4)
   byebug
+  dotenv-rails
   listen (~> 3.3)
   pg (~> 1.2.3)
   puma (~> 5.0)
@@ -171,7 +177,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 3.0.2p107
+   ruby 3.0.5p211
 
 BUNDLED WITH
-   2.2.29
+   2.2.33
