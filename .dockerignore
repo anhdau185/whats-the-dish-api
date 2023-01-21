@@ -1,0 +1,10 @@
+Dockerfile
+docker-compose.yml
+.dockerignore
+.git
+test
+.env.*
+.gitattributes
+.gitignore
+tags
+README.md
