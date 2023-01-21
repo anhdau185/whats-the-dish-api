@@ -4,7 +4,7 @@
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
-!_TAG_PROC_CWD	/Users/anhdau/Documents/codey/rails_apis/whats_the_dish_api/	//
+!_TAG_PROC_CWD	/Users/anhdau/Documents/codey/rails_apis/whats-the-dish-api/	//
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
@@ -12,6 +12,7 @@
 APP_PATH	bin/rails	/^APP_PATH = File.expand_path('..\/config\/application', __dir__)$/;"	C
 APP_ROOT	bin/setup	/^APP_ROOT = File.expand_path('..', __dir__)$/;"	C
 Api	app/controllers/api/v1/categories_controller.rb	/^module Api$/;"	m
+Api	app/controllers/api/v1/dishes_controller.rb	/^module Api$/;"	m
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	module:WhatsTheDishApi
 ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
 ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
@@ -20,35 +21,72 @@ ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::B
 ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
 ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c
 CategoriesController	app/controllers/api/v1/categories_controller.rb	/^    class CategoriesController < ApplicationController$/;"	c	module:Api.V1
+CategoriesControllerTest	test/controllers/api/v1/categories_controller_test.rb	/^class CategoriesControllerTest < ActionDispatch::IntegrationTest$/;"	c
 Category	app/models/category.rb	/^class Category < ApplicationRecord$/;"	c
+CategoryAssignment	app/models/category_assignment.rb	/^class CategoryAssignment < ApplicationRecord$/;"	c
+CategoryAssignmentTest	test/models/category_assignment_test.rb	/^class CategoryAssignmentTest < ActiveSupport::TestCase$/;"	c
 CategorySerializer	app/serializers/category_serializer.rb	/^class CategorySerializer < ActiveModel::Serializer$/;"	c
 CategoryTest	test/models/category_test.rb	/^class CategoryTest < ActiveSupport::TestCase$/;"	c
 Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	module:ApplicationCable
 Connection	app/channels/application_cable/connection.rb	/^  class Connection < ActionCable::Connection::Base$/;"	c	module:ApplicationCable
 ConnectionTest	test/channels/application_cable/connection_test.rb	/^class ApplicationCable::ConnectionTest < ActionCable::Connection::TestCase$/;"	c	module:ApplicationCable
 CreateCategories	db/migrate/20211005061319_create_categories.rb	/^class CreateCategories < ActiveRecord::Migration[6.1]$/;"	c
+CreateCategoryAssignments	db/migrate/20211022022133_create_category_assignments.rb	/^class CreateCategoryAssignments < ActiveRecord::Migration[6.1]$/;"	c
 CreateDishes	db/migrate/20211005062921_create_dishes.rb	/^class CreateDishes < ActiveRecord::Migration[6.1]$/;"	c
 Dish	app/models/dish.rb	/^class Dish < ApplicationRecord$/;"	c
 DishSerializer	app/serializers/dish_serializer.rb	/^class DishSerializer < ActiveModel::Serializer$/;"	c
 DishTest	test/models/dish_test.rb	/^class DishTest < ActiveSupport::TestCase$/;"	c
-README	README.md	/^# README$/;"	c
+DishesController	app/controllers/api/v1/dishes_controller.rb	/^    class DishesController < ApplicationController$/;"	c	module:Api.V1
+DishesControllerTest	test/controllers/api/v1/dishes_controller_test.rb	/^class DishesControllerTest < ActionDispatch::IntegrationTest$/;"	c
+Getting Started	README.md	/^# Getting Started$/;"	c
+How to run it on local	README.md	/^### How to run it on local$/;"	S	chapter:Getting Started
+Installing dependencies	README.md	/^### Installing dependencies$/;"	S	chapter:Getting Started
+RemoveCategoryFromDish	db/migrate/20211022025639_remove_category_from_dish.rb	/^class RemoveCategoryFromDish < ActiveRecord::Migration[6.1]$/;"	c
+RenameLikeCountColumn	db/migrate/20211022030145_rename_like_count_column.rb	/^class RenameLikeCountColumn < ActiveRecord::Migration[6.1]$/;"	c
+Setting up database	README.md	/^### Setting up database$/;"	S	chapter:Getting Started
 TestCase	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c	module:ActiveSupport
 V1	app/controllers/api/v1/categories_controller.rb	/^  module V1$/;"	m	module:Api
+V1	app/controllers/api/v1/dishes_controller.rb	/^  module V1$/;"	m	module:Api
+What's The Dish API	README.md	/^# What's The Dish API$/;"	c
 WhatsTheDishApi	config/application.rb	/^module WhatsTheDishApi$/;"	m
 activate_bundler	bin/bundle	/^  def activate_bundler$/;"	f
 activation_error_handling	bin/bundle	/^  def activation_error_handling$/;"	f
 bundler_requirement	bin/bundle	/^  def bundler_requirement$/;"	f
 bundler_version	bin/bundle	/^  def bundler_version$/;"	f
+cannot_unlike?	app/controllers/api/v1/dishes_controller.rb	/^      def cannot_unlike?(like_count)$/;"	f	class:Api.V1.DishesController
+category_attributes	app/controllers/api/v1/categories_controller.rb	/^      def category_attributes$/;"	f	class:Api.V1.CategoriesController
 change	db/migrate/20211005061319_create_categories.rb	/^  def change$/;"	f	class:CreateCategories
 change	db/migrate/20211005062921_create_dishes.rb	/^  def change$/;"	f	class:CreateDishes
+change	db/migrate/20211022022133_create_category_assignments.rb	/^  def change$/;"	f	class:CreateCategoryAssignments
+change	db/migrate/20211022025639_remove_category_from_dish.rb	/^  def change$/;"	f	class:RemoveCategoryFromDish
+change	db/migrate/20211022030145_rename_like_count_column.rb	/^  def change$/;"	f	class:RenameLikeCountColumn
 cli_arg_version	bin/bundle	/^  def cli_arg_version$/;"	f
+create	app/controllers/api/v1/categories_controller.rb	/^      def create$/;"	f	class:Api.V1.CategoriesController
+create	app/controllers/api/v1/dishes_controller.rb	/^      def create$/;"	f	class:Api.V1.DishesController
 default	config/database.yml	/^default: &default$/;"	a
+destroy	app/controllers/api/v1/categories_controller.rb	/^      def destroy$/;"	f	class:Api.V1.CategoriesController
+destroy	app/controllers/api/v1/dishes_controller.rb	/^      def destroy$/;"	f	class:Api.V1.DishesController
+dish_attributes	app/controllers/api/v1/dishes_controller.rb	/^      def dish_attributes$/;"	f	class:Api.V1.DishesController
 env_var_version	bin/bundle	/^  def env_var_version$/;"	f
 gemfile	bin/bundle	/^  def gemfile$/;"	f
+include_categories?	app/controllers/api/v1/dishes_controller.rb	/^      def include_categories?$/;"	f	class:Api.V1.DishesController
+include_dishes?	app/controllers/api/v1/categories_controller.rb	/^      def include_dishes?$/;"	f	class:Api.V1.CategoriesController
 index	app/controllers/api/v1/categories_controller.rb	/^      def index$/;"	f	class:Api.V1.CategoriesController
+index	app/controllers/api/v1/dishes_controller.rb	/^      def index$/;"	f	class:Api.V1.DishesController
 invoked_as_script?	bin/bundle	/^  def invoked_as_script?$/;"	f
+like	app/controllers/api/v1/dishes_controller.rb	/^      def like$/;"	f	class:Api.V1.DishesController
 load_bundler!	bin/bundle	/^  def load_bundler!$/;"	f
 lockfile	bin/bundle	/^  def lockfile$/;"	f
 lockfile_version	bin/bundle	/^  def lockfile_version$/;"	f
+order_by	app/controllers/api/v1/categories_controller.rb	/^      def order_by$/;"	f	class:Api.V1.CategoriesController
+order_by	app/controllers/api/v1/dishes_controller.rb	/^      def order_by$/;"	f	class:Api.V1.DishesController
+order_direction	app/controllers/api/v1/categories_controller.rb	/^      def order_direction$/;"	f	class:Api.V1.CategoriesController
+order_direction	app/controllers/api/v1/dishes_controller.rb	/^      def order_direction$/;"	f	class:Api.V1.DishesController
+query_categories	app/controllers/api/v1/categories_controller.rb	/^      def query_categories$/;"	f	class:Api.V1.CategoriesController
+query_dishes	app/controllers/api/v1/dishes_controller.rb	/^      def query_dishes$/;"	f	class:Api.V1.DishesController
 show	app/controllers/api/v1/categories_controller.rb	/^      def show$/;"	f	class:Api.V1.CategoriesController
+show	app/controllers/api/v1/dishes_controller.rb	/^      def show$/;"	f	class:Api.V1.DishesController
 system!	bin/setup	/^def system!(*args)$/;"	f
+unlike	app/controllers/api/v1/dishes_controller.rb	/^      def unlike$/;"	f	class:Api.V1.DishesController
+update	app/controllers/api/v1/categories_controller.rb	/^      def update$/;"	f	class:Api.V1.CategoriesController
+update	app/controllers/api/v1/dishes_controller.rb	/^      def update$/;"	f	class:Api.V1.DishesController

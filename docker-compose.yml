@@ -22,7 +22,7 @@ services:
       - db_data:/var/lib/postgresql/data
   dish:
     container_name: dish
-    image: dish-api
+    image: registry.digitalocean.com/anhdau185/dish-api:latest
     networks:
       - common_network
     restart: always
