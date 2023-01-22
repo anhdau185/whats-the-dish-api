@@ -1,6 +1,6 @@
 # Dish API
 
-RESTful API for serving your favorite dishes and recipes.
+RESTful web service for serving your favorite dishes and recipes.
 
 Built with Ruby on Rails 6.
 
