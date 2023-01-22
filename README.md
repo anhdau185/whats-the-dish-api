@@ -117,7 +117,7 @@ docker pull postgres:13-alpine
 docker pull registry.digitalocean.com/anhdau185/dish-api:latest
 ```
 
-Note: You need authenticating before accessing a private Docker registry. See [this guide](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-top-of-digitalocean-spaces-and-use-it-with-digitalocean-kubernetes) on how to do this.
+Note: You need authenticating before accessing a private Docker registry. See [this quick guide](https://github.com/anhdau185/application-infrastructure/tree/main/docker#accessing-digitalocean-private-docker-registry) on how to do this.
 
 3. Run the service
 
