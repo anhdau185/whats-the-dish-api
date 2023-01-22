@@ -1,6 +1,8 @@
 # Dish API
 
-RESTful API for serving the What's The Dish client.
+RESTful API for serving your favorite dishes and recipes.
+
+Built with Ruby on Rails 6.
 
 ## Getting Started
 
