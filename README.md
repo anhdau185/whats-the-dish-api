@@ -169,30 +169,40 @@ docker compose down
 
 Check out [this doc](https://github.com/anhdau185/application-infrastructure/blob/main/docs/whats-the-dish/workflows-backend.md) for how to develop the service as well as how to deploy and monitor it on a production environment.
 
-<!-- ## Usage
+## Usage
 
-This section lists out all the APIs exposed by the Auth Service as well as how to test them.
+This section lists out all the APIs exposed by the Dish API as well as how to test them.
 
 ### API Documentation
 
-| API Name/Purpose    | Endpoint               | Request Body                           | Bearer Token Required? | Comment             |
-| ------------------- | ---------------------- | -------------------------------------- | ---------------------- | ------------------- |
-| Register a New User | `POST /users/signup`   | `{ name; username; password; scope? }` | No                     |
-| Get the User List   | `GET /users`           |                                        | Access Token           | Needs authorization |
-| Get a User          | `GET /users/:id`       |                                        | Access Token           | Needs authorization |
-| Update a User       | `PATCH /users/:id`     | `{ name; password }`                   | Access Token           | Needs authorization |
-| Delete a User       | `DELETE /users/:id`    |                                        | Access Token           | Needs authorization |
-| Sign In             | `POST /auth/login`     | `{ username; password }`               | No                     |
-| Authenticate a User | `POST /auth/protected` |                                        | Access Token           |
-| Refresh Tokens      | `POST /auth/refresh`   |                                        | Refresh Token          |
-| Sign Out            | `POST /auth/logout`    |                                        | Refresh Token          |
+#### Categories
+
+| API Name/Purpose  | Endpoint                        | Request Params/Body                                                                                                              |
+| ----------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Get Category List | `GET /api/v1/categories`        | [Get Category List Params](https://github.com/anhdau185/whats-the-dish-web-app/blob/master/src/api/types.d.ts#L16-L20)           |
+| Get a Category    | `GET /api/v1/categories/:id`    | [Get a Category Params](https://github.com/anhdau185/whats-the-dish-web-app/blob/master/src/api/types.d.ts#L22-L24)              |
+| Create a Category | `POST /api/v1/categories`       | [Create a Category Request Body](https://github.com/anhdau185/whats-the-dish-web-app/blob/master/src/models/category.ts#L16-L18) |
+| Update a Category | `PATCH /api/v1/categories/:id`  | [Update a Category Request Body](https://github.com/anhdau185/whats-the-dish-web-app/blob/master/src/models/category.ts#L20-L22) |
+| Delete a Category | `DELETE /api/v1/categories/:id` |
+
+#### Dishes
+
+| API Name/Purpose | Endpoint                        | Request Params/Body                                                                                                      |
+| ---------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Get Dish List    | `GET /api/v1/dishes`            | [Get Dish List Params](https://github.com/anhdau185/whats-the-dish-web-app/blob/master/src/api/types.d.ts#L36-L40)       |
+| Get a Dish       | `GET /api/v1/dishes/:id`        | [Get a Dish Params](https://github.com/anhdau185/whats-the-dish-web-app/blob/master/src/api/types.d.ts#L42-L44)          |
+| Create a Dish    | `POST /api/v1/dishes`           | [Create a Dish Request Body](https://github.com/anhdau185/whats-the-dish-web-app/blob/master/src/models/dish.ts#L21-L23) |
+| Update a Dish    | `PATCH /api/v1/dishes/:id`      | [Update a Dish Request Body](https://github.com/anhdau185/whats-the-dish-web-app/blob/master/src/models/dish.ts#L21-L23) |
+| Delete a Dish    | `DELETE /api/v1/dishes/:id`     |
+| Like a Dish      | `PUT /api/v1/dishes/:id/like`   |
+| Unlike a Dish    | `PUT /api/v1/dishes/:id/unlike` |
 
 ### Testing
 
-[Postman](https://www.postman.com/), a popular API platform, is a helpful tool to play around with and get used to the above APIs. Here are some sample collections that can be useful for testing these APIs:
+[Postman](https://www.postman.com), a popular API platform, is a helpful tool to play around with and get used to the above APIs. Here are some sample collections that can be useful for testing these APIs:
 
-- APIs: [Download here](https://gist.github.com/anhdau185/726c55cbf40cfef57a3ff377ee4576d9)
-- Environment: [Download here](https://gist.github.com/anhdau185/11cbdbc976f7fc6de5b22564ef63b0ca) -->
+- APIs: [Download here](https://gist.github.com/anhdau185/e461b97c0ddc1879a41c21c33de70134)
+- Environment: [Download here](https://gist.github.com/anhdau185/aa2a42959f43a4ee3a351a57ea00a84a)
 
 ## Roadmap
 
