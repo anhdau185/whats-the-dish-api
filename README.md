@@ -1,8 +1,14 @@
 # Dish API
 
+<p align="center">
+  <a href="http://dish.thecodinglad.com" target="_blank">
+    <img src="https://dl.dropboxusercontent.com/s/n7efpzxni2u1avb/dish.png" width="180" alt="Dish Logo">
+  </a>
+</p>
+
 RESTful web service for serving your favorite dishes and recipes.
 
-Built with Ruby on Rails 6.
+Built with [Ruby on Rails](https://rubyonrails.org) 6.
 
 ## Getting Started
 
