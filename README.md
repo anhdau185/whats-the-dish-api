@@ -6,9 +6,7 @@
   </a>
 </p>
 
-RESTful web service for serving your favorite dishes and recipes.
-
-Built with [Ruby on Rails](https://rubyonrails.org) 6.
+A RESTful web service for serving your favorite dishes and recipes. Built with [Ruby on Rails](https://rubyonrails.org) 6.
 
 ## Getting Started
 
